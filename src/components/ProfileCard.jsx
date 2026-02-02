@@ -5,7 +5,7 @@ export default function ProfileCard({ user }) {
 
       <div className="card-content">
         <img
-          src="/batman.jpg"
+          src={`${import.meta.env.BASE_URL}batman.jpg`}
           alt="Batmann"
           className="profile-image"
         />

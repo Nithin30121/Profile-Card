@@ -7,7 +7,7 @@ function App() {
   const [user, setUser] = useState({
     name: "Batmann 🦇",
     role: "Dark Knight",
-    rating: 5.0,
+    rating: 5,
     price: 999,
     status: "On Patrol"
   });
@@ -15,14 +15,20 @@ function App() {
   const toggleStatus = () => {
     setUser((prevUser) => ({
       ...prevUser,
-      status: prevUser.status === "On Patrol" ? "In Batcave" : "On Patrol"
+      status:
+        prevUser.status === "On Patrol"
+          ? "In Batcave"
+          : "On Patrol"
     }));
   };
 
   return (
     <div className="app-container">
       <ProfileCard user={user} />
-      <UserStatus status={user.status} toggleStatus={toggleStatus} />
+      <UserStatus
+        status={user.status}
+        toggleStatus={toggleStatus}
+      />
     </div>
   );
 }
