@@ -1,5 +1,3 @@
-import batmanImg from "../assets/batman.jpg";
-
 export default function ProfileCard({ user }) {
   return (
     <div className="card">
@@ -7,7 +5,7 @@ export default function ProfileCard({ user }) {
 
       <div className="card-content">
         <img
-          src={batmanImg}
+          src="/batman.jpg"
           alt="Batmann"
           className="profile-image"
         />
@@ -33,10 +31,14 @@ export default function ProfileCard({ user }) {
 
         <div className="status">
           Status:
-          <span className="status-text">{user.status}</span>
+          <span className="status-text">
+            {user.status}
+          </span>
         </div>
 
-        <button className="main-btn">Signal the Bat</button>
+        <button className="main-btn">
+          Signal the Bat
+        </button>
       </div>
     </div>
   );

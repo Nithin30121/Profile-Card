@@ -4,7 +4,11 @@ export default function UserStatus({ status, toggleStatus }) {
       <p>
         Current Status: <strong>{status}</strong>
       </p>
-      <button onClick={toggleStatus} className="toggle-btn">
+
+      <button
+        onClick={toggleStatus}
+        className="toggle-btn"
+      >
         Toggle Status
       </button>
     </div>
